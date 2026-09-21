@@ -1,0 +1,5 @@
+clinical_test,unit,first_date,first_value,latest_date,latest_value,absolute_change,percentage_change,change_flag
+Alanine Aminotransferase,U/L,2024-01-01,3.0,2024-01-31,3.667083,0.6670829999999999,22.236099999999993,True
+Aspartate Aminotransferase,U/L,2024-01-01,307.0,2024-01-31,298.77185,-8.228150000000028,-2.6801791530944716,False
+Gamma-Glutamyl Transferase,U/L,2024-01-01,1192.0,2024-01-31,1167.3224,-24.677599999999984,-2.0702684563758376,False
+Triglycerides,mg/dL,2024-01-01,10.0,2024-01-31,12.251917,2.2519170000000006,22.519170000000006,True
