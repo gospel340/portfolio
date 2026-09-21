@@ -910,6 +910,25 @@ The project provides practical evidence of the ability to work with healthcare i
 
 ---
 
+## Results Summary
+
+The pipeline was tested end-to-end using synthetic HL7 v2 laboratory messages and a public FHIR R4 server.
+
+Key results:
+
+* **HL7 parsing:** Successfully extracted patient and laboratory observation data from ORU^R01 messages.
+* **Data validation:** Correctly classified valid, incomplete, and invalid observations as **ACCEPT, REVIEW, or REJECT**.
+* **FHIR transformation:** Successfully mapped accepted laboratory results into FHIR R4 `Patient` and `Observation` resources.
+* **FHIR integration:** Successfully submitted multiple synthetic transactions to the FHIR API.
+* **Read-back verification:** Successfully retrieved created Patient and Observation resources from the FHIR server.
+* **Reconciliation:** Successfully compared source HL7 data with FHIR output across **6 data-integrity checks**, achieving **6/6 matches** in successful test cases.
+* **Duplicate handling:** Detected HTTP `412` duplicate-resource responses and routed them through explicit error handling.
+* **Data quality:** Identified LOINC completeness of **18/20 (90%)** in the analysed synthetic FHIR dataset.
+* **Integration testing:** Tested valid results, missing values, non-numeric values, invalid units, preliminary results, duplicate resources, and read-back verification.
+
+These results demonstrate practical capability across **healthcare interoperability, data validation, REST API integration, healthcare data quality, testing, and source-to-target reconciliation**.
+
+
 ## Synthetic Data Notice
 
 All patient identifiers, clinical results, dates, and other healthcare information used in this project are synthetic and are intended solely for educational and portfolio purposes.
